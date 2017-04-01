@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASNESVRAM.cs" />
     <Compile Include="Languages\en-GB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +71,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SNESColor.cs" />
+    <Compile Include="SNESPalette.cs" />
+    <Compile Include="SNESPaletteEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SNESPaletteEditor.Designer.cs">
+      <DependentUpon>SNESPaletteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SNESTile.cs" />
     <Compile Include="TranslatorStylerInterface.cs" />
     <EmbeddedResource Include="Languages\en-GB.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SNESPaletteEditor.resx">
+      <DependentUpon>SNESPaletteEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

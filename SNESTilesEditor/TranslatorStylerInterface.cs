@@ -67,7 +67,7 @@ namespace SNESTilesEditor
 
         public void SaveSettings()
         {
-            throw new NotImplementedException();
+            Properties.Settings.Default.Save();
         }
     }
 }
