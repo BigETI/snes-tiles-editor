@@ -1,0 +1,14 @@
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\SNESTilesEditor.exe.config
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\SNESTilesEditor.exe
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\SNESTilesEditor.pdb
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\MetroFramework.Design.dll
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\MetroFramework.dll
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\MetroFramework.Fonts.dll
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.csprojResolveAssemblyReference.cache
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.Properties.Resources.resources
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.csproj.GenerateResource.Cache
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.exe
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.pdb
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.Languages.en-GB.resources
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\obj\Debug\SNESTilesEditor.MainForm.resources
+C:\dev\cs\SNESTilesEditor\SNESTilesEditor\bin\Debug\MetroTranslator.dll
