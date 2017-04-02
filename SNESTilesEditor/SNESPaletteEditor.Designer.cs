@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SNESPaletteEditor));
+            SNESTilesEditor.SNESColor snesColor1 = new SNESTilesEditor.SNESColor();
             this.mainPanel = new MetroFramework.Controls.MetroPanel();
+            this.paletteControl = new SNESTilesEditor.SNESPaletteControl();
             this.selectColorButton = new MetroFramework.Controls.MetroButton();
             this.colorRGBLabel = new MetroFramework.Controls.MetroLabel();
             this.colorSNESLabel = new MetroFramework.Controls.MetroLabel();
             this.selectedColorPanel = new System.Windows.Forms.Panel();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.paletteControl = new SNESTilesEditor.SNESPaletteControl();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(450, 488);
+            this.mainPanel.Size = new System.Drawing.Size(450, 256);
             this.mainPanel.Style = MetroFramework.MetroColorStyle.Lime;
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -60,9 +62,29 @@
             this.mainPanel.VerticalScrollbarHighlightOnWheel = false;
             this.mainPanel.VerticalScrollbarSize = 8;
             // 
+            // paletteControl
+            // 
+            this.paletteControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("paletteControl.BackgroundImage")));
+            this.paletteControl.Location = new System.Drawing.Point(0, 0);
+            this.paletteControl.Name = "paletteControl";
+            this.paletteControl.SelectedIndex = 0;
+            this.paletteControl.Size = new System.Drawing.Size(256, 256);
+            snesColor1.ARGB32 = -16777216;
+            snesColor1.B = ((byte)(0));
+            snesColor1.BGR15 = ((short)(0));
+            snesColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            snesColor1.G = ((byte)(0));
+            snesColor1.R = ((byte)(0));
+            snesColor1.RGB24 = 0;
+            snesColor1.VRAM = new byte[] {
+        ((byte)(0)),
+        ((byte)(0))};
+            this.paletteControl.SNESColor = snesColor1;
+            this.paletteControl.TabIndex = 7;
+            // 
             // selectColorButton
             // 
-            this.selectColorButton.Location = new System.Drawing.Point(335, 44);
+            this.selectColorButton.Location = new System.Drawing.Point(332, 41);
             this.selectColorButton.Name = "selectColorButton";
             this.selectColorButton.Size = new System.Drawing.Size(30, 23);
             this.selectColorButton.Style = MetroFramework.MetroColorStyle.Lime;
@@ -76,9 +98,9 @@
             // 
             this.colorRGBLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.colorRGBLabel.Location = new System.Drawing.Point(265, 93);
+            this.colorRGBLabel.Location = new System.Drawing.Point(262, 90);
             this.colorRGBLabel.Name = "colorRGBLabel";
-            this.colorRGBLabel.Size = new System.Drawing.Size(182, 19);
+            this.colorRGBLabel.Size = new System.Drawing.Size(185, 19);
             this.colorRGBLabel.Style = MetroFramework.MetroColorStyle.Lime;
             this.colorRGBLabel.TabIndex = 5;
             this.colorRGBLabel.Text = "RGB: 0x000000";
@@ -88,9 +110,9 @@
             // 
             this.colorSNESLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.colorSNESLabel.Location = new System.Drawing.Point(265, 70);
+            this.colorSNESLabel.Location = new System.Drawing.Point(262, 67);
             this.colorSNESLabel.Name = "colorSNESLabel";
-            this.colorSNESLabel.Size = new System.Drawing.Size(182, 23);
+            this.colorSNESLabel.Size = new System.Drawing.Size(185, 23);
             this.colorSNESLabel.Style = MetroFramework.MetroColorStyle.Lime;
             this.colorSNESLabel.TabIndex = 4;
             this.colorSNESLabel.Text = "SNES: 0x0000";
@@ -98,17 +120,10 @@
             // 
             // selectedColorPanel
             // 
-            this.selectedColorPanel.Location = new System.Drawing.Point(265, 3);
+            this.selectedColorPanel.Location = new System.Drawing.Point(262, 0);
             this.selectedColorPanel.Name = "selectedColorPanel";
             this.selectedColorPanel.Size = new System.Drawing.Size(64, 64);
             this.selectedColorPanel.TabIndex = 3;
-            // 
-            // paletteControl
-            // 
-            this.paletteControl.Location = new System.Drawing.Point(3, 3);
-            this.paletteControl.Name = "paletteControl";
-            this.paletteControl.Size = new System.Drawing.Size(256, 256);
-            this.paletteControl.TabIndex = 7;
             // 
             // SNESPaletteEditor
             // 
@@ -118,7 +133,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SNESPaletteEditor";
-            this.Size = new System.Drawing.Size(450, 488);
+            this.Size = new System.Drawing.Size(450, 256);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

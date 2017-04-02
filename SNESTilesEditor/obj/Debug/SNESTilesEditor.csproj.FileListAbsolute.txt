@@ -27,3 +27,4 @@ C:\dev\repos\snes-tiles-editor\SNESTilesEditor\obj\Debug\SNESTilesEditor.csproj.
 C:\dev\repos\snes-tiles-editor\SNESTilesEditor\obj\Debug\SNESTilesEditor.exe
 C:\dev\repos\snes-tiles-editor\SNESTilesEditor\obj\Debug\SNESTilesEditor.pdb
 C:\dev\repos\snes-tiles-editor\SNESTilesEditor\obj\Debug\SNESTilesEditor.SNESPaletteControl.resources
+C:\dev\repos\snes-tiles-editor\SNESTilesEditor\obj\Debug\SNESTilesEditor.csprojResolveAssemblyReference.cache

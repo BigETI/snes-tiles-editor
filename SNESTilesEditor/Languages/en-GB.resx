@@ -123,8 +123,14 @@
   <data name="GERMAN" xml:space="preserve">
     <value>Deutsch/German</value>
   </data>
+  <data name="PROJECTS" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="SELECT_LANGUAGE" xml:space="preserve">
     <value>Select language...</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="SNES_TILES_EDITOR" xml:space="preserve">
     <value>SNES Tiles Editor</value>

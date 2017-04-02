@@ -79,11 +79,29 @@ namespace SNESTilesEditor.Languages {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Projects ähnelt.
+        /// </summary>
+        internal static string PROJECTS {
+            get {
+                return ResourceManager.GetString("PROJECTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select language... ähnelt.
         /// </summary>
         internal static string SELECT_LANGUAGE {
             get {
                 return ResourceManager.GetString("SELECT_LANGUAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Settings ähnelt.
+        /// </summary>
+        internal static string SETTINGS {
+            get {
+                return ResourceManager.GetString("SETTINGS", resourceCulture);
             }
         }
         

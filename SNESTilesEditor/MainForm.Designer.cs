@@ -30,8 +30,11 @@
         {
             this.languagesPanel = new MetroFramework.Controls.MetroPanel();
             this.languagesComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.snesPaletteEditor1 = new SNESTilesEditor.SNESPaletteEditor();
+            this.mainTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.projectsTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.settingsTabPage = new MetroFramework.Controls.MetroTabPage();
             this.languagesPanel.SuspendLayout();
+            this.mainTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // languagesPanel
@@ -67,20 +70,62 @@
             this.languagesComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.languagesComboBox.UseSelectable = true;
             // 
-            // snesPaletteEditor1
+            // mainTabControl
             // 
-            this.snesPaletteEditor1.Location = new System.Drawing.Point(15, 62);
-            this.snesPaletteEditor1.Margin = new System.Windows.Forms.Padding(2);
-            this.snesPaletteEditor1.Name = "snesPaletteEditor1";
-            this.snesPaletteEditor1.Size = new System.Drawing.Size(568, 365);
-            this.snesPaletteEditor1.TabIndex = 1;
+            this.mainTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainTabControl.Controls.Add(this.projectsTabPage);
+            this.mainTabControl.Controls.Add(this.settingsTabPage);
+            this.mainTabControl.FontSize = MetroFramework.MetroTabControlSize.Tall;
+            this.mainTabControl.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.mainTabControl.Location = new System.Drawing.Point(15, 63);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 1;
+            this.mainTabControl.Size = new System.Drawing.Size(570, 363);
+            this.mainTabControl.Style = MetroFramework.MetroColorStyle.Lime;
+            this.mainTabControl.TabIndex = 1;
+            this.mainTabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.mainTabControl.UseSelectable = true;
+            // 
+            // projectsTabPage
+            // 
+            this.projectsTabPage.HorizontalScrollbarBarColor = true;
+            this.projectsTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.projectsTabPage.HorizontalScrollbarSize = 10;
+            this.projectsTabPage.Location = new System.Drawing.Point(4, 38);
+            this.projectsTabPage.Name = "projectsTabPage";
+            this.projectsTabPage.Size = new System.Drawing.Size(562, 321);
+            this.projectsTabPage.Style = MetroFramework.MetroColorStyle.Lime;
+            this.projectsTabPage.TabIndex = 0;
+            this.projectsTabPage.Text = "{$PROJECTS$}";
+            this.projectsTabPage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.projectsTabPage.VerticalScrollbarBarColor = true;
+            this.projectsTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.projectsTabPage.VerticalScrollbarSize = 10;
+            // 
+            // settingsTabPage
+            // 
+            this.settingsTabPage.HorizontalScrollbarBarColor = true;
+            this.settingsTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.settingsTabPage.HorizontalScrollbarSize = 10;
+            this.settingsTabPage.Location = new System.Drawing.Point(4, 38);
+            this.settingsTabPage.Name = "settingsTabPage";
+            this.settingsTabPage.Size = new System.Drawing.Size(562, 321);
+            this.settingsTabPage.Style = MetroFramework.MetroColorStyle.Lime;
+            this.settingsTabPage.TabIndex = 1;
+            this.settingsTabPage.Text = "{$SETTINGS$}";
+            this.settingsTabPage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.settingsTabPage.VerticalScrollbarBarColor = true;
+            this.settingsTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.settingsTabPage.VerticalScrollbarSize = 10;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 488);
-            this.Controls.Add(this.snesPaletteEditor1);
+            this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.languagesPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
@@ -89,6 +134,7 @@
             this.Text = "{$SNES_TILES_EDITOR$}";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.languagesPanel.ResumeLayout(false);
+            this.mainTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -97,7 +143,9 @@
 
         private MetroFramework.Controls.MetroPanel languagesPanel;
         private MetroFramework.Controls.MetroComboBox languagesComboBox;
-        private SNESPaletteEditor snesPaletteEditor1;
+        private MetroFramework.Controls.MetroTabControl mainTabControl;
+        private MetroFramework.Controls.MetroTabPage projectsTabPage;
+        private MetroFramework.Controls.MetroTabPage settingsTabPage;
     }
 }
 
