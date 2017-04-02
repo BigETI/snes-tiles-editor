@@ -6,21 +6,17 @@ namespace SNESTilesEditor
 {
     public class SNESTile : ASNESVRAM
     {
-        private SNESPalette palette;
+        private SNESTileMap tileMap;
 
         private short[] indicies = new short[64];
 
         private Image image = null;
 
-        public SNESPalette Palette
+        public SNESTileMap TileMap
         {
             get
             {
-                return palette;
-            }
-            set
-            {
-                palette = value;
+                return tileMap;
             }
         }
 
@@ -52,6 +48,7 @@ namespace SNESTilesEditor
                     {
                         for (int i = 0; i < indicies.Length; i++)
                             indicies[i] = (short)((value[i * 2]) | (value[(i * 2) + 1] << 8));
+                        image = null;
                     }
                 }
             }
@@ -66,16 +63,16 @@ namespace SNESTilesEditor
                 {
                     ret = new Bitmap(8, 8);
                     for (int i = 0; i < indicies.Length; i++)
-                        ret.SetPixel(i % 8, i - (i % 8), palette.Palette[i].Color);
+                        ret.SetPixel(i % 8, i - (i % 8), tileMap.Palette.Palette[i].Color);
                     image = ret;
                 }
                 return ret;
             }
         }
 
-        public SNESTile(SNESPalette palette)
+        public SNESTile(SNESTileMap tileMap)
         {
-            this.palette = palette;
+            this.tileMap = tileMap;
         }
 
         public void SetIndex(int x, int y, short index)

@@ -9,7 +9,7 @@ namespace SNESTilesEditor
         private byte g = 0;
         private byte b = 0;
 
-        private Image image;
+        private Image image = null;
 
         public byte B
         {
@@ -20,6 +20,7 @@ namespace SNESTilesEditor
             set
             {
                 b = (byte)(value & 0x1F);
+                image = null;
             }
         }
 
@@ -32,6 +33,7 @@ namespace SNESTilesEditor
             set
             {
                 g = (byte)(value & 0x1F);
+                image = null;
             }
         }
 
@@ -44,6 +46,7 @@ namespace SNESTilesEditor
             set
             {
                 r = (byte)(value & 0x1F);
+                image = null;
             }
         }
 
@@ -59,6 +62,7 @@ namespace SNESTilesEditor
                 r = (byte)(value & 0x1F);
                 g = (byte)((value >> 5) & 0x1F);
                 b = (byte)((value >> 10) & 0x1F);
+                image = null;
             }
         }
         
@@ -66,14 +70,15 @@ namespace SNESTilesEditor
         {
             get
             {
-                return (int)((r * 255.0) / 30.0) | ((int)(((g * 255.0) / 30.0)) << 8) | ((int)(((b * 255.0) / 30.0)) << 16);
+                return (int)((b * 255.0) / 30.0) | ((int)(((g * 255.0) / 30.0)) << 8) | ((int)(((r * 255.0) / 30.0)) << 16);
             }
             set
             {
                 value &= 0xFFFFFF;
-                b = (byte)((((value >> 16) & 0xFF) * 30.0) / 255.0);
+                r = (byte)((((value >> 16) & 0xFF) * 30.0) / 255.0);
                 g = (byte)((((value >> 8) & 0xFF) * 30.0) / 255.0);
-                r = (byte)(((value & 0xFF) * 30.0) / 255.0);
+                b = (byte)(((value & 0xFF) * 30.0) / 255.0);
+                image = null;
             }
         }
 
@@ -81,13 +86,14 @@ namespace SNESTilesEditor
         {
             get
             {
-                return (RGB24 << 8) | 0xFF;
+                return (int)(RGB24 | 0xFF000000);
             }
             set
             {
-                b = (byte)((((value >> 24) & 0xFF) * 30.0) / 255.0);
-                g = (byte)((((value >> 16) & 0xFF) * 30.0) / 255.0);
-                r = (byte)((((value >> 8) & 0xFF) * 30.0) / 255.0);
+                r = (byte)((((value >> 16) & 0xFF) * 30.0) / 255.0);
+                g = (byte)((((value >> 8) & 0xFF) * 30.0) / 255.0);
+                b = (byte)(((value & 0xFF) * 30.0) / 255.0);
+                image = null;
             }
         }
 
@@ -133,6 +139,23 @@ namespace SNESTilesEditor
                 }
                 return ret;
             }
+        }
+
+        public SNESColor()
+        {
+            //
+        }
+
+        public SNESColor(SNESColor color)
+        {
+            r = color.r;
+            g = color.g;
+            b = color.b;
+        }
+
+        public SNESColor(Color color)
+        {
+            Color = color;
         }
     }
 }
